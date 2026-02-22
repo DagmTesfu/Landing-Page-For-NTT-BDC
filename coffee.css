@@ -1,0 +1,719 @@
+/* ============================================================
+   coffee.css – Coffee Division Page Styles
+   ============================================================ */
+
+/* ── Coffee Hero ─────────────────────────────────────────── */
+.coffee-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.coffee-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 60% 40%, #7A4E30 0%, #3D2212 35%, #1A0800 70%, #080808 100%);
+}
+
+.coffee-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(201, 168, 76, 0.08) 0%,
+            transparent 40%,
+            rgba(8, 8, 8, 0.6) 100%);
+}
+
+/* Floating beans field */
+.hero-beans-field {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.hb {
+    position: absolute;
+}
+
+.hb1 {
+    top: 20%;
+    right: 8%;
+    animation: beanDrift 9s ease-in-out infinite;
+}
+
+.hb2 {
+    top: 50%;
+    right: 22%;
+    animation: beanDrift 12s ease-in-out 2s infinite;
+}
+
+.hb3 {
+    top: 30%;
+    right: 15%;
+    animation: beanDrift 10s ease-in-out 4s infinite;
+}
+
+.hb4 {
+    top: 65%;
+    right: 5%;
+    animation: beanDrift 8s ease-in-out 1s infinite;
+}
+
+@keyframes beanDrift {
+
+    0%,
+    100% {
+        transform: rotate(-10deg) translateY(0);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: rotate(10deg) translateY(-18px);
+        opacity: 1;
+    }
+}
+
+/* Coffee cup graphic */
+.coffee-cup-graphic {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    opacity: 0.9;
+    filter: drop-shadow(0 20px 60px rgba(94, 58, 34, 0.6));
+    animation: cupFloat 6s ease-in-out infinite;
+}
+
+@keyframes cupFloat {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50%) translateY(-14px);
+    }
+}
+
+/* Steam waves */
+.cup-steam {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+}
+
+.steam-wave {
+    width: 4px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.25), transparent);
+    border-radius: var(--radius-full);
+    animation: steamWave 3.5s ease-in-out infinite;
+}
+
+.sw1 {
+    height: 60px;
+    animation-delay: 0s;
+}
+
+.sw2 {
+    height: 85px;
+    animation-delay: 0.7s;
+}
+
+.sw3 {
+    height: 50px;
+    animation-delay: 1.4s;
+}
+
+@keyframes steamWave {
+    0% {
+        transform: scaleX(1) translateY(0);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: scaleX(1.5) translateY(-20px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scaleX(0.5) translateY(-50px);
+        opacity: 0;
+    }
+}
+
+/* Hero content */
+.coffee-hero-content {
+    position: relative;
+    z-index: 5;
+    padding-top: 80px;
+}
+
+.coffee-hero-tag {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coffee-hero-tag::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold-mid);
+}
+
+.coffee-hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.coffee-hero-title span {
+    background: linear-gradient(135deg, var(--gold-mid), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.coffee-hero-title em {
+    font-style: italic;
+    color: rgba(245, 240, 232, 0.7);
+    font-size: 0.85em;
+}
+
+.coffee-hero-sub {
+    font-size: 1.05rem;
+    color: rgba(245, 240, 232, 0.7);
+    line-height: 1.75;
+    max-width: 500px;
+    margin-bottom: 36px;
+}
+
+.coffee-hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ── About Coffee ────────────────────────────────────────── */
+.coffee-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.coffee-sourcing-badges {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.sourcing-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: var(--radius-md);
+    flex: 1;
+    min-width: 130px;
+}
+
+.sb-icon {
+    font-size: 1.4rem;
+}
+
+.sourcing-badge strong {
+    font-size: 0.88rem;
+    color: var(--cream);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.sourcing-badge small {
+    font-size: 0.76rem;
+    color: var(--cream-dim);
+}
+
+/* Regions */
+.ethiopia-map-card {
+    padding: 36px;
+}
+
+.map-title {
+    margin-bottom: 24px;
+}
+
+.coffee-regions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.region-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.region-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.region-info {
+    flex: 1;
+}
+
+.region-info strong {
+    font-size: 0.92rem;
+    color: var(--cream);
+    display: block;
+}
+
+.region-info span {
+    font-size: 0.78rem;
+    color: var(--cream-dim);
+}
+
+.region-bar {
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.region-fill {
+    height: 100%;
+    background: var(--gold-mid);
+    border-radius: var(--radius-full);
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.stagger-child.visible .region-fill {
+    width: inherit;
+}
+
+/* ── Process Section ─────────────────────────────────────── */
+.process-section {
+    position: relative;
+}
+
+.process-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 100%, rgba(94, 58, 34, 0.15) 0%, transparent 60%),
+        linear-gradient(180deg, var(--dark-base) 0%, var(--dark-900) 100%);
+}
+
+.process-timeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    padding: 36px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 168, 76, 0.1);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-med);
+    position: relative;
+}
+
+.process-step:hover {
+    background: rgba(201, 168, 76, 0.05);
+    border-color: rgba(201, 168, 76, 0.25);
+    transform: translateY(-6px);
+}
+
+.ps-number {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--gold-mid);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.ps-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.process-step h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    font-size: 0.84rem;
+    color: var(--cream-dim);
+    line-height: 1.65;
+}
+
+.process-connector {
+    flex-shrink: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-mid), rgba(201, 168, 76, 0.3));
+    margin-top: 70px;
+}
+
+/* ── Products Grid ───────────────────────────────────────── */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-visual {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(94, 58, 34, 0.2);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    transition: all var(--transition-med);
+}
+
+.product-card:hover .product-visual {
+    background: rgba(94, 58, 34, 0.35);
+    transform: scale(1.06) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(94, 58, 34, 0.3);
+}
+
+.product-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: rgba(201, 168, 76, 0.15);
+    color: var(--gold-mid);
+    margin-bottom: 12px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 0.85rem;
+    color: var(--cream-dim);
+    line-height: 1.65;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+    font-size: 0.75rem;
+    color: var(--gold-mid);
+    font-weight: 500;
+}
+
+.product-meta span {
+    padding: 4px 10px;
+    background: rgba(201, 168, 76, 0.08);
+    border-radius: var(--radius-full);
+}
+
+/* ── Gallery / Flavor Wheel ──────────────────────────────── */
+.gallery-section {
+    position: relative;
+}
+
+.gallery-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(94, 58, 34, 0.12) 0%, transparent 65%);
+}
+
+.flavor-wheel-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+.flavor-ring-outer {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: flavorSpin 30s linear infinite;
+    position: relative;
+}
+
+.flavor-ring-mid {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: flavorSpin 20s linear reverse infinite;
+}
+
+.flavor-ring-inner {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    background: rgba(201, 168, 76, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flavor-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 2rem;
+}
+
+.flavor-center small {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+}
+
+@keyframes flavorSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.flavor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 40px;
+    max-width: 600px;
+}
+
+.flavor-tag {
+    padding: 10px 22px;
+    border-radius: var(--radius-full);
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    font-size: 0.88rem;
+    color: var(--cream-dim);
+    transition: all var(--transition-fast);
+    cursor: default;
+}
+
+.flavor-tag:hover {
+    background: rgba(201, 168, 76, 0.15);
+    border-color: var(--gold-mid);
+    color: var(--cream);
+    transform: scale(1.05);
+}
+
+/* ── Distributor Section ─────────────────────────────────── */
+.distributor-section {
+    position: relative;
+}
+
+.distributor-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0d0800 0%, #080808 100%);
+}
+
+.distributor-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 0% 50%, rgba(201, 168, 76, 0.12) 0%, transparent 50%);
+}
+
+.distributor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.dist-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dist-benefit {
+    font-size: 0.95rem;
+    color: var(--cream-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dist-benefit::before {
+    color: var(--gold-bright);
+}
+
+/* Form styles */
+.distributor-form-wrap {
+    padding: 40px;
+}
+
+.dist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    color: var(--cream-dim);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: var(--cream);
+    font-family: var(--font-sans);
+    transition: border-color var(--transition-fast);
+    outline: none;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: rgba(201, 168, 76, 0.4);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.form-group select option {
+    background: #1a1a1a;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-connector {
+        width: 2px;
+        height: 24px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .coffee-about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .distributor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coffee-cup-graphic {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .coffee-hero-title {
+        font-size: 2.8rem;
+    }
+}

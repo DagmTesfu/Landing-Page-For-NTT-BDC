@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Division – NTT BDC | Premium Ethiopian Coffee</title>
+    <meta name="description"
+        content="NTT BDC Coffee Division – Premium Ethiopian coffee, sourced from highland farms, expertly roasted and packaged. Become a distributor today." />
+    <meta name="keywords"
+        content="Ethiopian coffee, premium coffee, coffee roaster Ethiopia, coffee distributor, single origin coffee" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="coffee.css" />
+</head>
+
+<body>
+
+    <!-- ── Page Loader ──────────────────────────────────────── -->
+    <div id="page-loader">
+        <div class="loader-logo"
+            style="background:linear-gradient(135deg,#C9A84C,#E8C96A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+            NTT BDC</div>
+        <div class="loader-sub">Coffee Division</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- ── WhatsApp Float ────────────────────────────────────── -->
+    <a href="https://wa.me/251900000000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- ── Mobile Menu ────────────────────────────────────────── -->
+    <div class="mob-menu">
+        <span class="mob-close">✕</span>
+        <a href="index.html">Home</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="agriculture.html">Agriculture</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- ── Navigation ────────────────────────────────────────── -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark">NTT</div>
+            <div class="nav-logo-text">
+                <span class="nav-logo-name">BDC</span>
+                <span class="nav-logo-sub">Coffee Division</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">← Back to Home</a>
+            <a href="#about-coffee">About</a>
+            <a href="#process">Process</a>
+            <a href="#products">Products</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#distributor" class="nav-cta">Become Distributor</a>
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- COFFEE HERO                                            -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="coffee-hero" id="hero">
+        <canvas id="hero-canvas-coffee" class="hero-canvas"
+            style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2"></canvas>
+        <div class="coffee-hero-bg"></div>
+        <div class="noise-overlay"></div>
+
+        <!-- Animated Coffee Cup SVG -->
+        <div class="coffee-cup-graphic">
+            <svg viewBox="0 0 200 180" width="340" height="306" xmlns="http://www.w3.org/2000/svg">
+                <!-- Saucer -->
+                <ellipse cx="100" cy="158" rx="75" ry="14" fill="#3D2212" opacity="0.6" />
+                <!-- Cup body -->
+                <path d="M40 80 L55 155 L145 155 L160 80 Z" fill="#5E3A22" />
+                <path d="M40 80 L55 155 L145 155 L160 80 Z" fill="url(#cupGrad)" />
+                <!-- Cup rim -->
+                <ellipse cx="100" cy="80" rx="60" ry="10" fill="#7A4E30" />
+                <!-- Coffee liquid -->
+                <ellipse cx="100" cy="85" rx="54" ry="9" fill="#2C1A0E" />
+                <ellipse cx="100" cy="85" rx="40" ry="6" fill="#3D2212" opacity="0.8" />
+                <!-- Handle -->
+                <path d="M155 100 Q190 100 190 125 Q190 150 155 150" fill="none" stroke="#5E3A22" stroke-width="10"
+                    stroke-linecap="round" />
+                <path d="M155 100 Q182 100 182 125 Q182 145 155 145" fill="none" stroke="#7A4E30" stroke-width="6"
+                    stroke-linecap="round" />
+                <!-- Highlight on cup -->
+                <path d="M55 95 L60 145" stroke="rgba(255,255,255,0.12)" stroke-width="4" stroke-linecap="round" />
+                <!-- Gradient def -->
+                <defs>
+                    <linearGradient id="cupGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(0,0,0,0.3)" />
+                        <stop offset="50%" stop-color="rgba(255,255,255,0.05)" />
+                        <stop offset="100%" stop-color="rgba(0,0,0,0.2)" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <!-- Steam rising from cup -->
+            <div class="cup-steam">
+                <div class="steam-wave sw1"></div>
+                <div class="steam-wave sw2"></div>
+                <div class="steam-wave sw3"></div>
+            </div>
+        </div>
+
+        <!-- Floating coffee beans -->
+        <div class="hero-beans-field">
+            <div class="hb hb1">
+                <svg viewBox="0 0 50 75" width="50" height="75">
+                    <ellipse cx="25" cy="37" rx="18" ry="32" fill="#6B3A2A" opacity="0.9" />
+                    <path d="M25 8 Q25 37 25 66" stroke="#3D2212" stroke-width="2" fill="none" />
+                </svg>
+            </div>
+            <div class="hb hb2">
+                <svg viewBox="0 0 50 75" width="38" height="57">
+                    <ellipse cx="25" cy="37" rx="18" ry="32" fill="#8B5E3C" opacity="0.7" />
+                    <path d="M25 8 Q25 37 25 66" stroke="#3D2212" stroke-width="2" fill="none" />
+                </svg>
+            </div>
+            <div class="hb hb3">
+                <svg viewBox="0 0 50 75" width="60" height="90">
+                    <ellipse cx="25" cy="37" rx="18" ry="32" fill="#5E3A22" opacity="0.8" />
+                    <path d="M25 8 Q25 37 25 66" stroke="#3D2212" stroke-width="2" fill="none" />
+                </svg>
+            </div>
+            <div class="hb hb4">
+                <svg viewBox="0 0 50 75" width="42" height="63">
+                    <ellipse cx="25" cy="37" rx="18" ry="32" fill="#7A4E30" opacity="0.75" />
+                    <path d="M25 8 Q25 37 25 66" stroke="#3D2212" stroke-width="2" fill="none" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="coffee-hero-content container">
+            <div class="coffee-hero-tag">NTT BDC — Coffee Division</div>
+            <h1 class="coffee-hero-title">
+                From Ethiopia's<br />
+                <span>Highland Farms</span><br />
+                <em>to Your Cup</em>
+            </h1>
+            <p class="coffee-hero-sub">
+                Discover Ethiopia's finest single-origin coffee — hand-selected, artisan-roasted,<br />
+                and delivered with the pride of our land in every sip.
+            </p>
+            <div class="coffee-hero-btns">
+                <a href="#products" class="btn btn-gold">View Our Products</a>
+                <a href="#distributor" class="btn btn-outline-gold">Become a Distributor</a>
+            </div>
+        </div>
+
+        <!-- Scroll -->
+        <div class="scroll-hint" style="position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:5">
+            <div class="scroll-hint-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- ABOUT COFFEE                                           -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="about-coffee">
+        <div class="container">
+            <div class="coffee-about-grid">
+                <div class="reveal-left">
+                    <div class="section-tag">Our Coffee Story</div>
+                    <h2 class="section-title">Where <span>Passion</span> Meets<br />Perfection</h2>
+                    <div class="gold-divider"></div>
+                    <p class="section-sub" style="margin-top:20px">
+                        Ethiopia is the birthplace of coffee. Our highland farms, sitting above 1,500 meters, produce
+                        beans with a complex flavor profile unmatched anywhere in the world.
+                    </p>
+                    <p class="section-sub" style="margin-top:14px">
+                        At NTT BDC, we take these extraordinary beans through a meticulous journey — from careful
+                        harvesting to precision roasting — ensuring every bag carries the authentic taste and aroma of
+                        Ethiopian excellence.
+                    </p>
+                    <div class="coffee-sourcing-badges" style="margin-top:28px">
+                        <div class="sourcing-badge">
+                            <div class="sb-icon">🏔️</div>
+                            <div><strong>1500m+ altitude</strong><br /><small>Highland farms</small></div>
+                        </div>
+                        <div class="sourcing-badge">
+                            <div class="sb-icon">🌿</div>
+                            <div><strong>100% Natural</strong><br /><small>No artificial additives</small></div>
+                        </div>
+                        <div class="sourcing-badge">
+                            <div class="sb-icon">✋</div>
+                            <div><strong>Hand-picked</strong><br /><small>Selected at peak ripeness</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee-about-visual reveal-right">
+                    <!-- Ethiopian Coffee Map illustration -->
+                    <div class="ethiopia-map-card glass-card">
+                        <div class="map-title">
+                            <span class="section-tag">Sourcing Regions</span>
+                        </div>
+                        <div class="coffee-regions" data-stagger>
+                            <div class="region-item stagger-child">
+                                <div class="region-dot" style="background:#C9A84C"></div>
+                                <div class="region-info">
+                                    <strong>Yirgacheffe</strong>
+                                    <span>Floral, citrus, jasmine notes</span>
+                                </div>
+                                <div class="region-bar">
+                                    <div class="region-fill" style="width:92%;background:var(--gold-mid)"></div>
+                                </div>
+                            </div>
+                            <div class="region-item stagger-child">
+                                <div class="region-dot" style="background:#A0793A"></div>
+                                <div class="region-info">
+                                    <strong>Sidama</strong>
+                                    <span>Berry, bright, wine-like</span>
+                                </div>
+                                <div class="region-bar">
+                                    <div class="region-fill" style="width:78%"></div>
+                                </div>
+                            </div>
+                            <div class="region-item stagger-child">
+                                <div class="region-dot" style="background:#E8C96A"></div>
+                                <div class="region-info">
+                                    <strong>Harrar</strong>
+                                    <span>Bold, fruity, wild notes</span>
+                                </div>
+                                <div class="region-bar">
+                                    <div class="region-fill" style="width:68%"></div>
+                                </div>
+                            </div>
+                            <div class="region-item stagger-child">
+                                <div class="region-dot" style="background:#6B3A2A"></div>
+                                <div class="region-info">
+                                    <strong>Jimma</strong>
+                                    <span>Smooth, earthy, low acid</span>
+                                </div>
+                                <div class="region-bar">
+                                    <div class="region-fill" style="width:55%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- ROASTING PROCESS                                       -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section process-section" id="process">
+        <div class="process-bg"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div style="text-align:center; margin-bottom:70px" class="reveal">
+                <div class="section-tag" style="justify-content:center">Our Craft</div>
+                <h2 class="section-title" style="text-align:center">The <span>Art & Science</span><br />of Coffee Making
+                </h2>
+            </div>
+            <div class="process-timeline" data-stagger>
+                <div class="process-step stagger-child">
+                    <div class="ps-number">01</div>
+                    <div class="ps-icon">🌱</div>
+                    <h3>Farm Selection</h3>
+                    <p>We partner directly with highland farms in Yirgacheffe, Sidama, Harrar, and Jimma — selecting
+                        only cherry-ripe beans at peak harvest.</p>
+                </div>
+                <div class="process-connector stagger-child"></div>
+                <div class="process-step stagger-child">
+                    <div class="ps-number">02</div>
+                    <div class="ps-icon">☀️</div>
+                    <h3>Natural Processing</h3>
+                    <p>Beans are sun-dried on raised African beds, allowing natural fermentation to develop complex
+                        sweetness and fruit-forward flavor notes.</p>
+                </div>
+                <div class="process-connector stagger-child"></div>
+                <div class="process-step stagger-child">
+                    <div class="ps-number">03</div>
+                    <div class="ps-icon">🔥</div>
+                    <h3>Precision Roasting</h3>
+                    <p>Our artisan roasters apply precision profiles — light, medium, or dark — to bring out each bean's
+                        unique character without burning notes.</p>
+                </div>
+                <div class="process-connector stagger-child"></div>
+                <div class="process-step stagger-child">
+                    <div class="ps-number">04</div>
+                    <div class="ps-icon">⚙️</div>
+                    <h3>Precision Grinding</h3>
+                    <p>Ground-to-order for retail and bulk clients, we calibrate grind size precisely for espresso,
+                        filter, French press, and Turkish preparation.</p>
+                </div>
+                <div class="process-connector stagger-child"></div>
+                <div class="process-step stagger-child">
+                    <div class="ps-number">05</div>
+                    <div class="ps-icon">✅</div>
+                    <h3>Quality Control</h3>
+                    <p>Every batch is cupped and tested. Only coffee scoring 85+ on the SCA scale passes our strict
+                        quality threshold for packaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- PRODUCTS                                               -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="products">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:60px" class="reveal">
+                <div class="section-tag" style="justify-content:center">What We Offer</div>
+                <h2 class="section-title" style="text-align:center">Our <span>Coffee Products</span></h2>
+            </div>
+            <div class="products-grid" data-stagger>
+
+                <div class="product-card glass-card stagger-child">
+                    <div class="product-visual pv-beans">
+                        <svg viewBox="0 0 120 120" width="80" height="80">
+                            <!-- Bag shape -->
+                            <rect x="20" y="30" width="80" height="80" rx="8" fill="#3D2212" />
+                            <rect x="20" y="30" width="80" height="80" rx="8" fill="url(#bagGrad)" opacity="0.5" />
+                            <!-- Bag tie -->
+                            <rect x="44" y="18" width="32" height="16" rx="4" fill="#5E3A22" />
+                            <rect x="48" y="12" width="24" height="10" rx="3" fill="#7A4E30" />
+                            <!-- Coffee beans on bag -->
+                            <ellipse cx="52" cy="70" rx="10" ry="17" fill="#6B3A2A" transform="rotate(-20 52 70)" />
+                            <path d="M52 53 Q52 70 52 87" stroke="#3D2212" stroke-width="1.5" fill="none"
+                                transform="rotate(-20 52 70)" />
+                            <ellipse cx="72" cy="72" rx="8" ry="14" fill="#8B5E3C" transform="rotate(15 72 72)" />
+                            <path d="M72 58 Q72 72 72 86" stroke="#3D2212" stroke-width="1.5" fill="none"
+                                transform="rotate(15 72 72)" />
+                            <!-- NTT text on bag -->
+                            <text x="50%" y="98" text-anchor="middle" font-size="8" fill="rgba(201,168,76,0.8)"
+                                font-family="serif" font-weight="bold">NTT BDC</text>
+                            <defs>
+                                <linearGradient id="bagGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="rgba(255,255,255,0.1)" />
+                                    <stop offset="100%" stop-color="rgba(0,0,0,0.3)" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="product-tag">Bestseller</div>
+                    <h3>Whole Roasted Beans</h3>
+                    <p>Single-origin roasted beans in 250g, 500g, and 1kg premium packaging. Light, Medium & Dark roast
+                        options available.</p>
+                    <div class="product-meta">
+                        <span>250g · 500g · 1kg</span>
+                        <span>3 Roast Levels</span>
+                    </div>
+                    <a href="#distributor" class="btn btn-outline-gold"
+                        style="margin-top:20px;font-size:0.82rem;padding:10px 20px">Inquire Now</a>
+                </div>
+
+                <div class="product-card glass-card stagger-child">
+                    <div class="product-visual pv-ground">
+                        <svg viewBox="0 0 120 120" width="80" height="80">
+                            <!-- Jar -->
+                            <rect x="25" y="40" width="70" height="70" rx="6" fill="#2C1A0E" />
+                            <rect x="25" y="40" width="70" height="70" rx="6" fill="url(#jarGrad)" opacity="0.4" />
+                            <!-- Lid -->
+                            <rect x="20" y="30" width="80" height="16" rx="8" fill="#5E3A22" />
+                            <!-- Ground texture effect -->
+                            <circle cx="55" cy="75" r="2" fill="#6B3A2A" />
+                            <circle cx="65" cy="70" r="1.5" fill="#8B5E3C" />
+                            <circle cx="70" cy="80" r="2" fill="#6B3A2A" />
+                            <circle cx="48" cy="82" r="1.5" fill="#7A4E30" />
+                            <circle cx="60" cy="88" r="2" fill="#5E3A22" />
+                            <!-- Label -->
+                            <rect x="30" y="95" width="60" height="12" rx="2" fill="rgba(201,168,76,0.15)" />
+                            <text x="60" y="104" text-anchor="middle" font-size="6" fill="rgba(201,168,76,0.9)"
+                                font-family="serif" font-weight="bold">GROUND COFFEE</text>
+                            <defs>
+                                <linearGradient id="jarGrad" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+                                    <stop offset="100%" stop-color="transparent" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="product-tag" style="background:rgba(201,168,76,0.1);color:var(--gold-mid)">Premium</div>
+                    <h3>Ground Coffee</h3>
+                    <p>Pre-ground to specified particle sizes for Turkish, espresso, filter, or French press. Custom
+                        grind on request for bulk orders.</p>
+                    <div class="product-meta">
+                        <span>All grind sizes</span>
+                        <span>Custom orders</span>
+                    </div>
+                    <a href="#distributor" class="btn btn-outline-gold"
+                        style="margin-top:20px;font-size:0.82rem;padding:10px 20px">Inquire Now</a>
+                </div>
+
+                <div class="product-card glass-card stagger-child">
+                    <div class="product-visual pv-office">
+                        <svg viewBox="0 0 120 120" width="80" height="80">
+                            <!-- Large sack -->
+                            <path d="M30 45 Q25 50 25 110 L95 110 Q95 50 90 45 Z" fill="#3D2212" />
+                            <path d="M30 45 Q25 50 25 110 L95 110 Q95 50 90 45 Z" fill="url(#sackGrad)" opacity="0.3" />
+                            <path d="M30 45 Q60 38 90 45" stroke="#5E3A22" stroke-width="3" fill="none" />
+                            <path d="M38 55 Q60 48 82 55" stroke="#7A4E30" stroke-width="1.5" fill="none"
+                                opacity="0.6" />
+                            <!-- Rope tie -->
+                            <ellipse cx="60" cy="42" rx="20" ry="5" fill="#2C1A0E" />
+                            <path d="M45 42 Q60 38 75 42" stroke="#C9A84C" stroke-width="2" fill="none" />
+                            <!-- 25KG text -->
+                            <text x="60" y="82" text-anchor="middle" font-size="14" fill="rgba(201,168,76,0.5)"
+                                font-family="serif" font-weight="bold">25 KG</text>
+                            <text x="60" y="95" text-anchor="middle" font-size="6" fill="rgba(245,240,232,0.4)"
+                                font-family="sans-serif">BULK SUPPLY</text>
+                            <defs>
+                                <linearGradient id="sackGrad" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="rgba(255,255,255,0.1)" />
+                                    <stop offset="100%" stop-color="rgba(0,0,0,0.2)" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="product-tag" style="background:rgba(76,175,114,0.1);color:var(--green-bright)">Bulk
+                    </div>
+                    <h3>Office & Bulk Supply</h3>
+                    <p>25kg and 50kg sacks designed for hotels, restaurants, cafés, and corporate offices. Consistent
+                        supply agreements available.</p>
+                    <div class="product-meta">
+                        <span>25kg · 50kg sacks</span>
+                        <span>Contract supply</span>
+                    </div>
+                    <a href="#distributor" class="btn btn-outline-gold"
+                        style="margin-top:20px;font-size:0.82rem;padding:10px 20px">Inquire Now</a>
+                </div>
+
+                <div class="product-card glass-card stagger-child">
+                    <div class="product-visual pv-retail">
+                        <svg viewBox="0 0 120 120" width="80" height="80">
+                            <!-- Premium box / retail package -->
+                            <rect x="22" y="32" width="76" height="82" rx="4" fill="#1A0D00" />
+                            <rect x="22" y="32" width="76" height="20" rx="4" fill="#C9A84C" opacity="0.9" />
+                            <!-- Side highlight -->
+                            <rect x="22" y="32" width="8" height="82" rx="2" fill="rgba(255,255,255,0.05)" />
+                            <!-- Label area -->
+                            <rect x="28" y="56" width="64" height="50" rx="2" fill="rgba(201,168,76,0.08)"
+                                stroke="rgba(201,168,76,0.15)" />
+                            <!-- Coffee bean illustration on label -->
+                            <ellipse cx="60" cy="76" rx="12" ry="20" fill="#3D2212" opacity="0.9" />
+                            <path d="M60 56 Q60 76 60 96" stroke="#2C1A0E" stroke-width="1.5" fill="none" />
+                            <text x="60" y="110" text-anchor="middle" font-size="5.5" fill="rgba(201,168,76,0.8)"
+                                font-family="serif" font-weight="bold">RETAIL PACK</text>
+                        </svg>
+                    </div>
+                    <div class="product-tag" style="background:rgba(232,201,106,0.1);color:var(--gold-bright)">Retail
+                    </div>
+                    <h3>Retail Packaging</h3>
+                    <p>High-end branded packaging ready for supermarket and specialty store shelves. Private label
+                        options available for distributors.</p>
+                    <div class="product-meta">
+                        <span>100g · 250g · 500g</span>
+                        <span>Private label</span>
+                    </div>
+                    <a href="#distributor" class="btn btn-outline-gold"
+                        style="margin-top:20px;font-size:0.82rem;padding:10px 20px">Inquire Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FLAVOR PROFILE / GALLERY                              -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section gallery-section" id="gallery">
+        <div class="gallery-bg"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div style="text-align:center;margin-bottom:60px" class="reveal">
+                <div class="section-tag" style="justify-content:center">Taste Profiles</div>
+                <h2 class="section-title" style="text-align:center">The <span>Flavors</span> of Ethiopia</h2>
+            </div>
+            <div class="flavor-wheel-wrap">
+                <div class="flavor-ring-outer">
+                    <div class="flavor-ring-mid">
+                        <div class="flavor-ring-inner">
+                            <div class="flavor-center">
+                                <span>☕</span>
+                                <small>NTT BDC</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flavor-tags" data-stagger>
+                    <div class="flavor-tag ft-1 stagger-child">🍋 Citrus</div>
+                    <div class="flavor-tag ft-2 stagger-child">🌸 Floral</div>
+                    <div class="flavor-tag ft-3 stagger-child">🍓 Berry</div>
+                    <div class="flavor-tag ft-4 stagger-child">🍫 Dark Choc</div>
+                    <div class="flavor-tag ft-5 stagger-child">🌰 Nutty</div>
+                    <div class="flavor-tag ft-6 stagger-child">🍊 Orange</div>
+                    <div class="flavor-tag ft-7 stagger-child">🫖 Jasmine</div>
+                    <div class="flavor-tag ft-8 stagger-child">🌿 Herbal</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- DISTRIBUTOR CTA                                        -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section distributor-section" id="distributor">
+        <div class="distributor-bg"></div>
+        <div class="noise-overlay"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div class="distributor-grid">
+                <div class="reveal-left">
+                    <div class="section-tag">Partnership Opportunity</div>
+                    <h2 class="section-title">Become an <span>NTT BDC</span><br />Coffee Distributor</h2>
+                    <div class="gold-divider"></div>
+                    <p class="section-sub" style="margin-top:20px">
+                        Join Ethiopia's fastest-growing premium coffee network. Whether you're a retailer, café, hotel,
+                        or export buyer — we have a partnership built for you.
+                    </p>
+                    <div class="dist-benefits" style="margin-top:28px">
+                        <div class="dist-benefit">✓ Exclusive territory rights</div>
+                        <div class="dist-benefit">✓ Marketing support materials</div>
+                        <div class="dist-benefit">✓ Flexible order quantities</div>
+                        <div class="dist-benefit">✓ Training and brand guidelines</div>
+                    </div>
+                </div>
+                <div class="distributor-form-wrap glass-card reveal-right">
+                    <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:24px;color:var(--cream)">
+                        Start Your Application</h3>
+                    <form class="dist-form" id="coffee-dist-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" placeholder="Your name" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" placeholder="Business name" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone / WhatsApp *</label>
+                                <input type="tel" placeholder="+251 9XX XXX XXX" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="you@email.com" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Partnership Type *</label>
+                            <select required>
+                                <option value="">Select type...</option>
+                                <option>Retail Distributor</option>
+                                <option>Hotel / Restaurant / Café</option>
+                                <option>Export Buyer</option>
+                                <option>Supermarket Chain</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Region</label>
+                            <input type="text" placeholder="Addis Ababa, Hawassa, ..." />
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="3" placeholder="Tell us about your business..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">
+                            Send Application ✓
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FOOTER                                                -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="nav-logo-mark">NTT</div>
+                        <div class="nav-logo-text">
+                            <span class="nav-logo-name">BDC</span>
+                            <span class="nav-logo-sub">Coffee Division</span>
+                        </div>
+                    </div>
+                    <p>Premium Ethiopian coffee from the highlands to your cup. Quality, passion, and authentic
+                        Ethiopian flavor in every bag.</p>
+                    <div class="footer-socials">
+                        <a class="social-btn" href="#" aria-label="Facebook">f</a>
+                        <a class="social-btn" href="#" aria-label="Instagram">in</a>
+                        <a class="social-btn" href="https://wa.me/251900000000" aria-label="WhatsApp">wa</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Coffee Division</h4>
+                    <ul>
+                        <li><a href="#about-coffee">Our Story</a></li>
+                        <li><a href="#process">Roasting Process</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#distributor">Become Distributor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Whole Beans</a></li>
+                        <li><a href="#products">Ground Coffee</a></li>
+                        <li><a href="#products">Bulk Supply</a></li>
+                        <li><a href="#products">Retail Packs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">NTT BDC Home</a></li>
+                        <li><a href="agriculture.html">Agriculture Division</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.html#impact">Our Impact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NTT BDC – Coffee Division. All rights reserved.</p>
+                <p>Made with ❤️ in Ethiopia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script>
+        // Form submit handler
+        document.getElementById('coffee-dist-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.textContent = '✓ Application Sent! We\'ll contact you soon.';
+            btn.style.background = 'linear-gradient(135deg, #2D7D46, #4CAF72)';
+            btn.disabled = true;
+        });
+    </script>
+</body>
+
+</html>

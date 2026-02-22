@@ -1,0 +1,875 @@
+/* ============================================================
+   agriculture.css – Agriculture Division Page Styles
+   ============================================================ */
+
+/* ── Agriculture Hero ────────────────────────────────────── */
+.agri-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.agri-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 40% 40%, #2D7D46 0%, #1B5232 30%, #060F0A 70%, #080808 100%);
+}
+
+.agri-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(76, 175, 114, 0.06) 0%,
+            transparent 40%,
+            rgba(6, 15, 10, 0.7) 100%);
+}
+
+/* Animated plant SVG */
+.agri-hero-plant {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    z-index: 3;
+    opacity: 0.9;
+    filter: drop-shadow(0 20px 60px rgba(27, 82, 50, 0.6));
+    animation: plantSway 8s ease-in-out infinite;
+    transform-origin: 50% 100%;
+}
+
+@keyframes plantSway {
+
+    0%,
+    100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Soil particles */
+.soil-particles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.sp {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(27, 82, 50, 0.6);
+    animation: spFloat 4s ease-in-out infinite;
+}
+
+.sp1 {
+    width: 6px;
+    height: 6px;
+    left: 40%;
+    bottom: 10px;
+    animation-delay: 0s;
+}
+
+.sp2 {
+    width: 4px;
+    height: 4px;
+    left: 50%;
+    bottom: 18px;
+    animation-delay: 0.7s;
+}
+
+.sp3 {
+    width: 8px;
+    height: 8px;
+    left: 55%;
+    bottom: 8px;
+    animation-delay: 1.4s;
+}
+
+.sp4 {
+    width: 5px;
+    height: 5px;
+    left: 45%;
+    bottom: 24px;
+    animation-delay: 2s;
+}
+
+.sp5 {
+    width: 3px;
+    height: 3px;
+    left: 58%;
+    bottom: 16px;
+    animation-delay: 2.5s;
+    background: rgba(76, 175, 114, 0.5);
+}
+
+@keyframes spFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Floating molecule particles */
+.fert-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.fert-mol {
+    position: absolute;
+    animation: molFloat var(--dur, 7s) ease-in-out var(--del, 0s) infinite;
+}
+
+.fm1 {
+    top: 25%;
+    left: 8%;
+    --dur: 9s;
+    --del: 0s;
+}
+
+.fm2 {
+    top: 15%;
+    left: 22%;
+    --dur: 11s;
+    --del: 2s;
+}
+
+.fm3 {
+    top: 45%;
+    left: 5%;
+    --dur: 8s;
+    --del: 4s;
+}
+
+@keyframes molFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+        opacity: 1;
+    }
+}
+
+/* Hero content */
+.agri-hero-content {
+    position: relative;
+    z-index: 5;
+    padding-top: 80px;
+}
+
+.agri-hero-tag {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.agri-hero-tag::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--green-bright);
+}
+
+.agri-hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.agri-hero-title span {
+    background: linear-gradient(135deg, var(--green-mid), var(--green-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.agri-hero-title em {
+    font-style: italic;
+    color: rgba(245, 240, 232, 0.65);
+    font-size: 0.82em;
+}
+
+.agri-hero-sub {
+    font-size: 1.05rem;
+    color: rgba(245, 240, 232, 0.7);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 36px;
+}
+
+.agri-hero-stats {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.ah-stat strong {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--green-bright);
+    display: block;
+    line-height: 1;
+}
+
+.ah-stat span {
+    font-size: 0.78rem;
+    color: rgba(245, 240, 232, 0.6);
+    letter-spacing: 0.5px;
+}
+
+.ah-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(76, 175, 114, 0.25);
+}
+
+.agri-hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ── About Agriculture ───────────────────────────────────── */
+.agri-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Supply Chain */
+.supply-chain {
+    padding: 36px;
+}
+
+.chain-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.chain-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+}
+
+.cs-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(76, 175, 114, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    background: rgba(45, 125, 70, 0.15);
+}
+
+.cs-info strong {
+    font-size: 0.95rem;
+    color: var(--cream);
+    display: block;
+}
+
+.cs-info span {
+    font-size: 0.8rem;
+    color: var(--cream-dim);
+}
+
+.chain-arrow {
+    text-align: center;
+    color: var(--green-mid);
+    font-size: 1.2rem;
+    padding-left: 24px;
+}
+
+/* Cert badges */
+.agri-cert-badges {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.cert-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    background: rgba(45, 125, 70, 0.1);
+    border: 1px solid rgba(76, 175, 114, 0.15);
+    flex: 1;
+    min-width: 120px;
+}
+
+.cert-badge span {
+    font-size: 1.4rem;
+}
+
+.cert-badge strong {
+    font-size: 0.85rem;
+    color: var(--cream);
+    display: block;
+}
+
+.cert-badge small {
+    font-size: 0.73rem;
+    color: var(--cream-dim);
+}
+
+/* ── Import Section ──────────────────────────────────────── */
+.import-section {
+    position: relative;
+}
+
+.import-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(27, 82, 50, 0.2) 0%, transparent 60%),
+        linear-gradient(180deg, var(--dark-base) 0%, var(--dark-900) 100%);
+}
+
+.import-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.import-card {
+    padding: 32px 26px;
+}
+
+.import-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.import-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: rgba(45, 125, 70, 0.15);
+    border: 1px solid rgba(76, 175, 114, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+    color: var(--green-bright);
+    flex-shrink: 0;
+}
+
+.nitrogen {
+    letter-spacing: -1px;
+}
+
+.phosphorus {
+    font-size: 1.4rem;
+}
+
+.import-tag {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.import-card h3 {
+    font-size: 1.05rem;
+    color: var(--cream);
+    font-weight: 600;
+}
+
+.import-card p {
+    font-size: 0.85rem;
+    color: var(--cream-dim);
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.import-bar-wrap {
+    margin-top: auto;
+}
+
+.import-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.73rem;
+    color: var(--cream-dim);
+    margin-bottom: 6px;
+}
+
+.import-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.ibar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1.2s ease;
+    background: var(--green-bright);
+}
+
+/* ── Blending Section ────────────────────────────────────── */
+.blending-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.blending-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blend-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.bs-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(76, 175, 114, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--green-bright);
+    flex-shrink: 0;
+}
+
+.blend-step strong {
+    font-size: 0.95rem;
+    color: var(--cream);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.blend-step p {
+    font-size: 0.84rem;
+    color: var(--cream-dim);
+}
+
+/* Machine visual */
+.blend-machine-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.blend-machine {
+    padding: 36px;
+    text-align: center;
+    max-width: 340px;
+    width: 100%;
+}
+
+.machine-title {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 24px;
+}
+
+.machine-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.machine-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(76, 175, 114, 0.2);
+    background: rgba(45, 125, 70, 0.1);
+    font-size: 0.78rem;
+    color: var(--cream-dim);
+    line-height: 1.4;
+    text-align: center;
+}
+
+.mi-icon {
+    font-size: 1.4rem;
+}
+
+.machine-plus {
+    font-size: 1.4rem;
+    color: var(--green-mid);
+    font-weight: 300;
+}
+
+.machine-arrow {
+    font-size: 1.4rem;
+    color: var(--green-mid);
+    margin: 8px 0;
+}
+
+.machine-core {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    border: 2px solid rgba(76, 175, 114, 0.3);
+    background: rgba(45, 125, 70, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.machine-spin {
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: var(--green-bright);
+    border-right-color: rgba(76, 175, 114, 0.4);
+    animation: machineSpin 2s linear infinite;
+}
+
+@keyframes machineSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.machine-core span {
+    font-size: 0.72rem;
+    color: var(--cream-dim);
+    line-height: 1.4;
+    z-index: 1;
+}
+
+.machine-output {
+    padding: 18px;
+    border-radius: var(--radius-md);
+    background: rgba(45, 125, 70, 0.15);
+    border: 1px solid rgba(76, 175, 114, 0.25);
+}
+
+.mo-icon {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.machine-output strong {
+    font-size: 0.95rem;
+    color: var(--cream);
+}
+
+/* ── Impact Stats (Agriculture) ──────────────────────────── */
+.impact-agri-section {
+    position: relative;
+}
+
+.impact-agri-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(27, 82, 50, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(45, 125, 70, 0.1) 0%, transparent 50%);
+}
+
+.agri-impact-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.ais-card {
+    text-align: center;
+    padding: 36px 20px;
+    border: 1px solid rgba(76, 175, 114, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.02);
+    transition: all var(--transition-med);
+}
+
+.ais-card:hover {
+    border-color: rgba(76, 175, 114, 0.3);
+    background: rgba(45, 125, 70, 0.06);
+    transform: translateY(-4px);
+}
+
+.ais-icon {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testimonial-card {
+    padding: 32px;
+}
+
+.test-stars {
+    color: var(--gold-bright);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.test-quote {
+    font-size: 0.93rem;
+    color: var(--cream-dim);
+    line-height: 1.75;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.test-quote::before {
+    content: '"';
+    font-size: 2rem;
+    color: var(--green-mid);
+    line-height: 0;
+    vertical-align: -0.4rem;
+    margin-right: 4px;
+}
+
+.test-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.test-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.test-author strong {
+    font-size: 0.9rem;
+    color: var(--cream);
+    display: block;
+}
+
+.test-author span {
+    font-size: 0.77rem;
+    color: var(--cream-dim);
+}
+
+/* ── Inquiry Section ─────────────────────────────────────── */
+.inquiry-section {
+    position: relative;
+}
+
+.inquiry-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #060F0A 0%, #080808 100%);
+}
+
+.inquiry-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 0% 50%, rgba(45, 125, 70, 0.12) 0%, transparent 50%);
+}
+
+.inquiry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.inquiry-form-wrap {
+    padding: 40px;
+}
+
+.iq-point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--cream-dim);
+    margin-bottom: 12px;
+}
+
+.iq-point span {
+    flex: 1;
+}
+
+.inquiry-points {
+    margin-top: 24px;
+}
+
+/* Form styles – reuse from coffee.css concept */
+.dist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.78rem;
+    color: var(--cream-dim);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 11px 14px;
+    font-size: 0.88rem;
+    color: var(--cream);
+    font-family: var(--font-sans);
+    outline: none;
+    resize: vertical;
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: rgba(76, 175, 114, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.form-group select option {
+    background: #1a1a1a;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+    .import-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agri-impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .agri-about-grid,
+    .blending-grid,
+    .inquiry-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .agri-hero-plant {
+        opacity: 0.3;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .import-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .agri-impact-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .agri-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .agri-hero-stats {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .ah-divider {
+        width: 40px;
+        height: 1px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agriculture Division – NTT BDC | Fertilizer Import & Blending Ethiopia</title>
+    <meta name="description"
+        content="NTT BDC Agriculture Division – importing high-quality European fertilizers from Czech Republic and blending them for Ethiopian farmers. Increase your yield today." />
+    <meta name="keywords"
+        content="fertilizer Ethiopia, Czech fertilizer, fertilizer import Ethiopia, agricultural blending, Ethiopian farming, crop yield improvement" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="agriculture.css" />
+</head>
+
+<body>
+
+    <!-- ── Page Loader ──────────────────────────────────────── -->
+    <div id="page-loader">
+        <div class="loader-logo"
+            style="background:linear-gradient(135deg,#2D7D46,#4CAF72);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+            NTT BDC</div>
+        <div class="loader-sub">Agriculture Division</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar" style="background:linear-gradient(90deg,#2D7D46,#4CAF72)"></div>
+        </div>
+    </div>
+
+    <!-- ── WhatsApp Float ────────────────────────────────────── -->
+    <a href="https://wa.me/251900000000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- ── Mobile Menu ────────────────────────────────────────── -->
+    <div class="mob-menu">
+        <span class="mob-close">✕</span>
+        <a href="index.html">Home</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="agriculture.html">Agriculture</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- ── Navigation ────────────────────────────────────────── -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark" style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright))">
+                NTT</div>
+            <div class="nav-logo-text">
+                <span class="nav-logo-name">BDC</span>
+                <span class="nav-logo-sub" style="color:var(--green-bright)">Agriculture Division</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">← Back to Home</a>
+            <a href="#about-agri">About</a>
+            <a href="#import">What We Import</a>
+            <a href="#blending">Blending Tech</a>
+            <a href="#impact-agri">Impact</a>
+            <a href="#inquiry" class="nav-cta"
+                style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright))">Distribution Inquiry</a>
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- AGRICULTURE HERO                                       -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="agri-hero" id="hero">
+        <canvas id="hero-canvas-agri" class="hero-canvas"
+            style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2"></canvas>
+        <div class="agri-hero-bg"></div>
+        <div class="noise-overlay"></div>
+
+        <!-- Large leaf illustration -->
+        <div class="agri-hero-plant">
+            <svg viewBox="0 0 300 480" width="350" height="560" xmlns="http://www.w3.org/2000/svg">
+                <!-- Main stem -->
+                <path d="M150 470 Q148 380 150 300 Q152 200 150 80" stroke="#1B5232" stroke-width="8" fill="none"
+                    stroke-linecap="round" />
+                <!-- Main large leaf left -->
+                <path d="M150 280 Q80 240 60 160 Q90 140 130 180 Q148 220 150 280Z" fill="#2D7D46" opacity="0.9" />
+                <path d="M150 280 Q100 240 80 180" stroke="#1B5232" stroke-width="2" fill="none" opacity="0.7" />
+                <path d="M120 250 Q90 220 85 195" stroke="#1B5232" stroke-width="1.5" fill="none" opacity="0.5" />
+                <!-- Main large leaf right -->
+                <path d="M150 200 Q220 160 240 80 Q210 60 170 100 Q152 140 150 200Z" fill="#4CAF72" opacity="0.85" />
+                <path d="M150 200 Q200 160 220 90" stroke="#2D7D46" stroke-width="2" fill="none" opacity="0.7" />
+                <!-- Small leaves -->
+                <path d="M150 380 Q100 360 90 310 Q115 295 140 340 Q148 360 150 380Z" fill="#2D7D46" opacity="0.8" />
+                <path d="M150 350 Q200 330 210 280 Q185 265 160 310 Q152 330 150 350Z" fill="#4CAF72" opacity="0.75" />
+                <!-- Top sprout -->
+                <path d="M150 80 Q130 50 125 20 Q145 18 155 50 Q158 65 150 80Z" fill="#4CAF72" opacity="0.9" />
+                <path d="M150 80 Q170 50 175 20 Q155 18 145 50 Q142 65 150 80Z" fill="#2D7D46" opacity="0.85" />
+                <!-- Ground / soil suggestion -->
+                <ellipse cx="150" cy="470" rx="60" ry="12" fill="#1B5232" opacity="0.5" />
+            </svg>
+            <!-- Particle soil dots -->
+            <div class="soil-particles">
+                <div class="sp sp1"></div>
+                <div class="sp sp2"></div>
+                <div class="sp sp3"></div>
+                <div class="sp sp4"></div>
+                <div class="sp sp5"></div>
+            </div>
+        </div>
+
+        <!-- Floating molecules / fertilizer particles -->
+        <div class="fert-particles">
+            <div class="fert-mol fm1">
+                <svg viewBox="0 0 60 60" width="50" height="50">
+                    <circle cx="30" cy="30" r="20" fill="none" stroke="rgba(76,175,114,0.4)" stroke-width="2" />
+                    <circle cx="30" cy="12" r="8" fill="rgba(45,125,70,0.6)" />
+                    <circle cx="48" cy="42" r="6" fill="rgba(76,175,114,0.5)" />
+                    <circle cx="12" cy="42" r="6" fill="rgba(45,125,70,0.5)" />
+                    <text x="30" y="34" text-anchor="middle" font-size="8" fill="rgba(200,255,210,0.8)"
+                        font-family="monospace">N</text>
+                </svg>
+            </div>
+            <div class="fert-mol fm2">
+                <svg viewBox="0 0 50 50" width="40" height="40">
+                    <circle cx="25" cy="25" r="18" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1.5" />
+                    <circle cx="25" cy="25" r="10" fill="rgba(160,121,58,0.4)" />
+                    <text x="25" y="29" text-anchor="middle" font-size="9" fill="rgba(232,201,106,0.8)"
+                        font-family="monospace">P</text>
+                </svg>
+            </div>
+            <div class="fert-mol fm3">
+                <svg viewBox="0 0 55 55" width="44" height="44">
+                    <circle cx="27" cy="27" r="20" fill="none" stroke="rgba(76,175,114,0.35)" stroke-width="2" />
+                    <circle cx="27" cy="27" r="12" fill="rgba(27,82,50,0.5)" />
+                    <text x="27" y="32" text-anchor="middle" font-size="10" fill="rgba(115,220,150,0.9)"
+                        font-family="monospace">K</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="agri-hero-content container">
+            <div class="agri-hero-tag">NTT BDC — Agriculture Division</div>
+            <h1 class="agri-hero-title">
+                Enriching Ethiopia's<br />
+                <span>Farmland</span><br />
+                <em>One Season At a Time</em>
+            </h1>
+            <p class="agri-hero-sub">
+                Bringing European-certified fertilizers from Czech Republic, blended<br />
+                locally to match Ethiopian soil conditions — for 40%+ better crop yields.
+            </p>
+            <div class="agri-hero-stats">
+                <div class="ah-stat">
+                    <strong data-counter data-target="40" data-suffix="%+">40%+</strong>
+                    <span>Yield Increase</span>
+                </div>
+                <div class="ah-divider"></div>
+                <div class="ah-stat">
+                    <strong data-counter data-target="1000" data-suffix="+">1000+</strong>
+                    <span>Farmers Supported</span>
+                </div>
+                <div class="ah-divider"></div>
+                <div class="ah-stat">
+                    <strong data-counter data-target="8" data-suffix="">8</strong>
+                    <span>Regions Served</span>
+                </div>
+            </div>
+            <div class="agri-hero-btns">
+                <a href="#import" class="btn btn-green">What We Import</a>
+                <a href="#inquiry" class="btn btn-outline-white">Distribution Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- ABOUT AGRICULTURE                                      -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="about-agri">
+        <div class="container">
+            <div class="agri-about-grid">
+                <div class="agri-visual reveal-left">
+                    <!-- Supply Chain Flow Graphic -->
+                    <div class="supply-chain glass-card">
+                        <h4
+                            style="color:var(--green-bright);font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px">
+                            Supply Chain</h4>
+                        <div class="chain-steps">
+                            <div class="chain-step">
+                                <div class="cs-icon"
+                                    style="background:rgba(45,125,70,0.2);border-color:rgba(45,125,70,0.3)">🇨🇿</div>
+                                <div class="cs-info"><strong>Czech Republic</strong><span>European source partner</span>
+                                </div>
+                            </div>
+                            <div class="chain-arrow">↓</div>
+                            <div class="chain-step">
+                                <div class="cs-icon"
+                                    style="background:rgba(201,168,76,0.15);border-color:rgba(201,168,76,0.25)">✈️</div>
+                                <div class="cs-info"><strong>Import & Logistics</strong><span>Quality-verified
+                                        shipments</span></div>
+                            </div>
+                            <div class="chain-arrow">↓</div>
+                            <div class="chain-step">
+                                <div class="cs-icon"
+                                    style="background:rgba(45,125,70,0.2);border-color:rgba(45,125,70,0.3)">⚙️</div>
+                                <div class="cs-info"><strong>Local Blending</strong><span>Ethiopian soil-specific
+                                        mix</span></div>
+                            </div>
+                            <div class="chain-arrow">↓</div>
+                            <div class="chain-step">
+                                <div class="cs-icon"
+                                    style="background:rgba(76,175,114,0.15);border-color:rgba(76,175,114,0.25)">👨‍🌾
+                                </div>
+                                <div class="cs-info"><strong>Ethiopian Farmers</strong><span>Direct distribution</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="section-tag" style="color:var(--green-bright)">Our Agricultural Mission</div>
+                    <h2 class="section-title">Ethiopia Has <span
+                            style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Incredible
+                            Land.</span><br />It Deserves Incredible Soil.</h2>
+                    <div class="green-divider"></div>
+                    <p class="section-sub" style="margin-top:20px">
+                        Ethiopia's agricultural potential is vast — but soil depletion and nutrient deficiency are
+                        holding back yields for millions of farming families. NTT BDC is changing that.
+                    </p>
+                    <p class="section-sub" style="margin-top:14px">
+                        By importing high-quality fertilizers from the Czech Republic and blending them at our local
+                        facility to match Ethiopian soil chemistry, we give farmers access to world-class nutrients at
+                        accessible prices.
+                    </p>
+                    <div class="agri-cert-badges" style="margin-top:28px">
+                        <div class="cert-badge">
+                            <span>🇪🇺</span>
+                            <div><strong>EU Certified</strong><br /><small>Czech standards</small></div>
+                        </div>
+                        <div class="cert-badge">
+                            <span>🌡️</span>
+                            <div><strong>Soil Tested</strong><br /><small>Ethiopian formulas</small></div>
+                        </div>
+                        <div class="cert-badge">
+                            <span>📋</span>
+                            <div><strong>Registered</strong><br /><small>Ethiopian Agriculture</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- WHAT WE IMPORT                                         -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section import-section" id="import">
+        <div class="import-bg"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div style="text-align:center;margin-bottom:60px" class="reveal">
+                <div class="section-tag" style="justify-content:center;color:var(--green-bright)">Czech Republic
+                    Partnership</div>
+                <h2 class="section-title" style="text-align:center">What We <span
+                        style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Import</span>
+                </h2>
+                <p class="section-sub" style="text-align:center;margin:16px auto">High-quality European fertilizers,
+                    rigorously tested and certified</p>
+            </div>
+            <div class="import-cards" data-stagger>
+                <div class="import-card glass-card glass-card-green stagger-child">
+                    <div class="import-card-header">
+                        <div class="import-icon nitrogen">N</div>
+                        <div>
+                            <div class="import-tag">Macro Nutrient</div>
+                            <h3>Nitrogen (N)</h3>
+                        </div>
+                    </div>
+                    <p>Essential for leaf growth, protein synthesis, and chlorophyll production. Our nitrogen formulas
+                        are slow-release for lasting effect across the growing season.</p>
+                    <div class="import-bar-wrap">
+                        <div class="import-bar-label"><span>Absorption Rate</span><span>94%</span></div>
+                        <div class="import-bar">
+                            <div class="ibar-fill" style="width:94%;background:var(--green-bright)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="import-card glass-card glass-card-green stagger-child">
+                    <div class="import-card-header">
+                        <div class="import-icon phosphorus"
+                            style="background:rgba(201,168,76,0.15);border-color:rgba(201,168,76,0.3);color:var(--gold-bright)">
+                            P</div>
+                        <div>
+                            <div class="import-tag" style="color:var(--gold-mid)">Macro Nutrient</div>
+                            <h3>Phosphorus (P)</h3>
+                        </div>
+                    </div>
+                    <p>Critical for root development, flowering, and energy transfer. Phosphorus deficiency is common in
+                        Ethiopian soils — our formulas correct this precisely.</p>
+                    <div class="import-bar-wrap">
+                        <div class="import-bar-label"><span>Absorption Rate</span><span>88%</span></div>
+                        <div class="import-bar">
+                            <div class="ibar-fill" style="width:88%;background:var(--gold-mid)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="import-card glass-card glass-card-green stagger-child">
+                    <div class="import-card-header">
+                        <div class="import-icon potassium"
+                            style="background:rgba(76,175,114,0.15);border-color:rgba(76,175,114,0.25);color:var(--green-bright)">
+                            K</div>
+                        <div>
+                            <div class="import-tag">Macro Nutrient</div>
+                            <h3>Potassium (K)</h3>
+                        </div>
+                    </div>
+                    <p>Strengthens plant immunity, water regulation, and grain filling. Our potassium blends improve
+                        drought resistance in highland and lowland farming zones.</p>
+                    <div class="import-bar-wrap">
+                        <div class="import-bar-label"><span>Absorption Rate</span><span>91%</span></div>
+                        <div class="import-bar">
+                            <div class="ibar-fill" style="width:91%;background:var(--green-bright)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="import-card glass-card glass-card-green stagger-child">
+                    <div class="import-card-header">
+                        <div class="import-icon micro"
+                            style="background:rgba(45,125,70,0.15);border-color:rgba(45,125,70,0.3);color:var(--green-bright);font-size:1.1rem">
+                            Mn+</div>
+                        <div>
+                            <div class="import-tag">Micro Nutrients</div>
+                            <h3>Micro Blends</h3>
+                        </div>
+                    </div>
+                    <p>Zinc, manganese, copper, and boron — the trace elements that dramatically improve yield quality
+                        and crop resilience when missing from the soil.</p>
+                    <div class="import-bar-wrap">
+                        <div class="import-bar-label"><span>Effectiveness</span><span>96%</span></div>
+                        <div class="import-bar">
+                            <div class="ibar-fill" style="width:96%;background:var(--green-bright)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- BLENDING TECHNOLOGY                                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section blending-section" id="blending">
+        <div class="container">
+            <div class="blending-grid">
+                <div class="reveal-left">
+                    <div class="section-tag" style="color:var(--green-bright)">Our Technology</div>
+                    <h2 class="section-title">Local Blending,<br /><span
+                            style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Global
+                            Standards</span></h2>
+                    <div class="green-divider"></div>
+                    <p class="section-sub" style="margin-top:20px">
+                        Our blending facility combines imported European nutrients with locally sourced organic
+                        materials to create fertilizer formulas specifically optimized for Ethiopian soil types.
+                    </p>
+                    <div class="blending-steps" style="margin-top:32px">
+                        <div class="blend-step">
+                            <div class="bs-num" style="color:var(--green-bright);border-color:rgba(76,175,114,0.3)">01
+                            </div>
+                            <div><strong>Soil Analysis</strong>
+                                <p>Regional soil samples tested for nutrient levels</p>
+                            </div>
+                        </div>
+                        <div class="blend-step">
+                            <div class="bs-num" style="color:var(--green-bright);border-color:rgba(76,175,114,0.3)">02
+                            </div>
+                            <div><strong>Formula Design</strong>
+                                <p>Custom NPK ratios designed per crop type</p>
+                            </div>
+                        </div>
+                        <div class="blend-step">
+                            <div class="bs-num" style="color:var(--green-bright);border-color:rgba(76,175,114,0.3)">03
+                            </div>
+                            <div><strong>Precision Blending</strong>
+                                <p>European nutrients + local organic materials</p>
+                            </div>
+                        </div>
+                        <div class="blend-step">
+                            <div class="bs-num" style="color:var(--green-bright);border-color:rgba(76,175,114,0.3)">04
+                            </div>
+                            <div><strong>Quality Testing</strong>
+                                <p>Lab-certified before packaging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blending-visual reveal-right">
+                    <!-- Blending Machine Visual -->
+                    <div class="blend-machine-wrap">
+                        <div class="blend-machine glass-card">
+                            <div class="machine-title">🔬 Blending Laboratory</div>
+                            <div class="machine-inputs">
+                                <div class="machine-input mi-eu">
+                                    <div class="mi-icon">🇨🇿</div>
+                                    <div>European<br />Nutrients</div>
+                                </div>
+                                <div class="machine-plus">+</div>
+                                <div class="machine-input mi-local">
+                                    <div class="mi-icon">🌿</div>
+                                    <div>Local<br />Organics</div>
+                                </div>
+                            </div>
+                            <div class="machine-arrow">↓</div>
+                            <div class="machine-core">
+                                <div class="machine-spin"></div>
+                                <span>AI-Assisted<br />Blending</span>
+                            </div>
+                            <div class="machine-arrow">↓</div>
+                            <div class="machine-output">
+                                <div class="mo-icon">🌱</div>
+                                <strong>Ethiopian-Optimized</strong><br />
+                                <small style="color:var(--green-bright)">Soil-specific fertilizer blend</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- IMPACT & TESTIMONIALS                                  -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section impact-agri-section" id="impact-agri">
+        <div class="impact-agri-bg"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div style="text-align:center;margin-bottom:60px" class="reveal">
+                <div class="section-tag" style="justify-content:center;color:var(--green-bright)">Results on the Ground
+                </div>
+                <h2 class="section-title" style="text-align:center">The <span
+                        style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Real
+                        Impact</span></h2>
+            </div>
+
+            <!-- Impact Stats -->
+            <div class="agri-impact-stats" data-stagger style="margin-bottom:70px">
+                <div class="ais-card stagger-child">
+                    <div class="ais-icon">📈</div>
+                    <div class="stat-number"
+                        style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"
+                        data-counter data-target="40" data-suffix="%">40%</div>
+                    <div class="stat-label">Average Yield Increase</div>
+                </div>
+                <div class="ais-card stagger-child">
+                    <div class="ais-icon">🌍</div>
+                    <div class="stat-number"
+                        style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"
+                        data-counter data-target="8">8</div>
+                    <div class="stat-label">Ethiopian Regions Covered</div>
+                </div>
+                <div class="ais-card stagger-child">
+                    <div class="ais-icon">👨‍🌾</div>
+                    <div class="stat-number"
+                        style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"
+                        data-counter data-target="1000" data-suffix="+">1000+</div>
+                    <div class="stat-label">Farmers Partnered</div>
+                </div>
+                <div class="ais-card stagger-child">
+                    <div class="ais-icon">🌾</div>
+                    <div class="stat-number"
+                        style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"
+                        data-counter data-target="300" data-suffix="t+">300t+</div>
+                    <div class="stat-label">Fertilizer Distributed</div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div style="margin-bottom:20px;text-align:center" class="reveal">
+                <div class="section-tag" style="justify-content:center;color:var(--green-bright)">Farmer Stories</div>
+                <h3 class="section-title" style="font-size:2rem;text-align:center">What Farmers Say</h3>
+            </div>
+            <div class="testimonials-grid" data-stagger>
+                <div class="testimonial-card glass-card glass-card-green stagger-child">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-quote">"Before NTT BDC fertilizer, I was getting 8 quintals per hectare. Last season
+                        I harvested 14 quintals. My family's income has changed completely."</p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background:rgba(45,125,70,0.3);color:var(--green-bright)">A
+                        </div>
+                        <div>
+                            <strong>Abebe Tadesse</strong>
+                            <span>Teff Farmer, Oromia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card glass-card-green stagger-child">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-quote">"The NTT BDC team came to our village, tested our soil, and gave us a specific
+                        blend. Even in the dry season, our wheat was stronger than ever."</p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background:rgba(45,125,70,0.3);color:var(--green-bright)">T
+                        </div>
+                        <div>
+                            <strong>Tigist Haile</strong>
+                            <span>Wheat Farmer, Amhara</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card glass-card-green stagger-child">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-quote">"I distribute NTT BDC fertilizers to 40 farmers in our cooperative. Every
+                        farmer has reported improvement. The trust is very high — they ask for this brand specifically."
+                    </p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background:rgba(45,125,70,0.3);color:var(--green-bright)">M
+                        </div>
+                        <div>
+                            <strong>Mulugeta Bekele</strong>
+                            <span>Cooperative Leader, SNNPR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- DISTRIBUTION INQUIRY FORM                             -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section inquiry-section" id="inquiry">
+        <div class="inquiry-bg"></div>
+        <div class="noise-overlay"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div class="inquiry-grid">
+                <div class="reveal-left">
+                    <div class="section-tag" style="color:var(--green-bright)">Get Involved</div>
+                    <h2 class="section-title">Become a <span
+                            style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Distribution</span><br />Partner
+                    </h2>
+                    <div class="green-divider"></div>
+                    <p class="section-sub" style="margin-top:20px">
+                        Are you a cooperative, agro-dealer, or regional distributor? Partner with NTT BDC and bring
+                        world-class fertilizers to Ethiopian farmers in your region.
+                    </p>
+                    <div class="inquiry-points" style="margin-top:28px">
+                        <div class="iq-point">🌍 <span>Region-exclusive distribution rights</span></div>
+                        <div class="iq-point">📦 <span>Flexible minimum order quantities</span></div>
+                        <div class="iq-point">💡 <span>Free farmer training & soil consultation</span></div>
+                        <div class="iq-point">🤝 <span>Competitive distributor margins</span></div>
+                        <div class="iq-point">📞 <span>Dedicated account manager support</span></div>
+                    </div>
+                </div>
+                <div class="inquiry-form-wrap glass-card reveal-right">
+                    <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:24px;color:var(--cream)">
+                        Distribution Inquiry</h3>
+                    <form class="dist-form" id="agri-dist-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" placeholder="Your name" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Organization</label>
+                                <input type="text" placeholder="Cooperative / Company" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone / WhatsApp *</label>
+                                <input type="tel" placeholder="+251 9XX XXX XXX" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="you@email.com" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Region / District *</label>
+                            <select required>
+                                <option value="">Select region...</option>
+                                <option>Addis Ababa</option>
+                                <option>Oromia</option>
+                                <option>Amhara</option>
+                                <option>SNNPR</option>
+                                <option>Tigray</option>
+                                <option>Somali</option>
+                                <option>Afar</option>
+                                <option>Benishangul-Gumuz</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Distribution Type</label>
+                            <select>
+                                <option value="">Select type...</option>
+                                <option>Farmer Cooperative</option>
+                                <option>Agro-Dealer / Input Supplier</option>
+                                <option>Regional Wholesaler</option>
+                                <option>Government / NGO</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Estimated Monthly Volume (bags)</label>
+                            <input type="number" placeholder="e.g. 500" />
+                        </div>
+                        <div class="form-group">
+                            <label>Message / Specific Requirements</label>
+                            <textarea rows="3" placeholder="Tell us about your distribution network..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-green" style="width:100%;justify-content:center">
+                            Submit Inquiry ✓
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FOOTER                                                -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="nav-logo-mark"
+                            style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright))">NTT</div>
+                        <div class="nav-logo-text">
+                            <span class="nav-logo-name">BDC</span>
+                            <span class="nav-logo-sub" style="color:var(--green-bright)">Agriculture Division</span>
+                        </div>
+                    </div>
+                    <p>Transforming Ethiopian agriculture with European-certified fertilizers, locally blended for
+                        maximum impact on your farmland.</p>
+                    <div class="footer-socials">
+                        <a class="social-btn" href="#" aria-label="Facebook">f</a>
+                        <a class="social-btn" href="#" aria-label="Instagram">in</a>
+                        <a class="social-btn" href="https://wa.me/251900000000" aria-label="WhatsApp">wa</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Agriculture</h4>
+                    <ul>
+                        <li><a href="#about-agri">Our Mission</a></li>
+                        <li><a href="#import">What We Import</a></li>
+                        <li><a href="#blending">Blending Technology</a></li>
+                        <li><a href="#impact-agri">Farmer Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partnership</h4>
+                    <ul>
+                        <li><a href="#inquiry">Become Distributor</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.html#impact">Company Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>NTT BDC</h4>
+                    <ul>
+                        <li><a href="index.html">Company Home</a></li>
+                        <li><a href="coffee.html">Coffee Division</a></li>
+                        <li><a href="contact.html">Get In Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NTT BDC – Agriculture Division. All rights reserved.</p>
+                <p>Made with ❤️ in Ethiopia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script>
+        // Animate import bars on scroll
+        const bars = document.querySelectorAll('.ibar-fill');
+        const barObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.style.transition = 'width 1.2s ease'; barObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.3 });
+        bars.forEach(b => { b.style.width = '0'; barObs.observe(b); setTimeout(() => { }, 100); });
+        // Re-animate stagger-children that have ibar-fill
+        document.querySelectorAll('.stagger-child').forEach(el => {
+            const bar = el.querySelector('.ibar-fill');
+            if (!bar) return;
+            const io = new IntersectionObserver(en => {
+                en.forEach(e => { if (e.isIntersecting) { bar.style.width = bar.getAttribute('style').match(/width:([\d.%]+)/)?.[1] || '80%'; io.unobserve(e.target); } });
+            }, { threshold: 0.5 });
+            io.observe(el);
+        });
+
+        // Form submit
+        document.getElementById('agri-dist-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.textContent = '✓ Inquiry Sent! We\'ll contact you soon.';
+            btn.style.background = 'linear-gradient(135deg, #C9A84C, #E8C96A)';
+            btn.style.color = '#0a0a0a';
+            btn.disabled = true;
+        });
+    </script>
+</body>
+
+</html>

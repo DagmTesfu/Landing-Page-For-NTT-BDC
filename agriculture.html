@@ -17,10 +17,8 @@
 
     <!-- ── Page Loader ──────────────────────────────────────── -->
     <div id="page-loader">
-        <div class="loader-logo"
-            style="background:linear-gradient(135deg,#2D7D46,#4CAF72);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-            NTT BDC</div>
-        <div class="loader-sub">Agriculture Division</div>
+        <div class="loader-logo" data-i18n="nav_agri">NTT BDC</div>
+        <div class="loader-sub" data-i18n="logo_agri_sub">Agriculture Division</div>
         <div class="loader-bar-wrap">
             <div class="loader-bar" style="background:linear-gradient(90deg,#2D7D46,#4CAF72)"></div>
         </div>
@@ -37,10 +35,14 @@
     <!-- ── Mobile Menu ────────────────────────────────────────── -->
     <div class="mob-menu">
         <span class="mob-close">✕</span>
-        <a href="index.html">Home</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="agriculture.html">Agriculture</a>
-        <a href="contact.html">Contact</a>
+        <div class="lang-switcher" style="margin-bottom: 20px;">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cs">CS</button>
+        </div>
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="coffee.html" data-i18n="nav_coffee">Coffee</a>
+        <a href="agriculture.html" data-i18n="nav_agri">Agriculture</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </div>
 
     <!-- ── Navigation ────────────────────────────────────────── -->
@@ -50,17 +52,20 @@
                 NTT</div>
             <div class="nav-logo-text">
                 <span class="nav-logo-name">BDC</span>
-                <span class="nav-logo-sub" style="color:var(--green-bright)">Agriculture Division</span>
+                <span class="nav-logo-sub" style="color:var(--green-bright)" data-i18n="logo_agri_sub">Agriculture
+                    Division</span>
             </div>
         </a>
         <div class="nav-links">
-            <a href="index.html">← Back to Home</a>
-            <a href="#about-agri">About</a>
-            <a href="#import">What We Import</a>
-            <a href="#blending">Blending Tech</a>
-            <a href="#impact-agri">Impact</a>
-            <a href="#inquiry" class="nav-cta"
-                style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright))">Distribution Inquiry</a>
+            <a href="index.html" data-i18n="back_to_home">← Back to Home</a>
+            <a href="#about-agri" data-i18n="nav_about">About</a>
+            <a href="#import" data-i18n="import_span">What We Import</a>
+            <a href="#blending" data-i18n="blending_tag">Blending Tech</a>
+            <a href="#impact-agri" data-i18n="impact_tag">Impact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="cs">CS</button>
+            </div>
         </div>
         <div class="hamburger"><span></span><span></span><span></span></div>
     </nav>
@@ -406,15 +411,13 @@
                                 </div>
                             </div>
                             <div class="machine-arrow">↓</div>
-                            <div class="machine-core">
-                                <div class="machine-spin"></div>
-                                <span>AI-Assisted<br />Blending</span>
-                            </div>
-                            <div class="machine-arrow">↓</div>
+
                             <div class="machine-output">
                                 <div class="mo-icon">🌱</div>
                                 <strong>Ethiopian-Optimized</strong><br />
                                 <small style="color:var(--green-bright)">Soil-specific fertilizer blend</small>
+
+                                <img src="Image/mixer.jpg" , alt="Mixer">
                             </div>
                         </div>
                     </div>
@@ -663,7 +666,7 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2026 NTT BDC – Agriculture Division. All rights reserved.</p>
-                <p>Made with ❤️ in Ethiopia</p>
+                <p>We Grow Together</p>
             </div>
         </div>
     </footer>
@@ -698,6 +701,8 @@
             btn.disabled = true;
         });
     </script>
+    <script src="animations.js"></script>
+    <script src="i18n.js"></script>
 </body>
 
 </html>

@@ -20,8 +20,8 @@
 
     <!-- ── Page Loader ──────────────────────────────────────── -->
     <div id="page-loader">
-        <div class="loader-logo">NTT BDC</div>
-        <div class="loader-sub">Excellence · Innovation · Ethiopia</div>
+        <div class="loader-logo" data-i18n="nav_home">NTT BDC</div>
+        <div class="loader-sub" data-i18n="hero_tagline">Excellence · Innovation · Ethiopia</div>
         <div class="loader-bar-wrap">
             <div class="loader-bar"></div>
         </div>
@@ -38,10 +38,14 @@
     <!-- ── Mobile Menu ────────────────────────────────────────── -->
     <div class="mob-menu">
         <span class="mob-close">✕</span>
-        <a href="index.html">Home</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="agriculture.html">Agriculture</a>
-        <a href="contact.html">Contact</a>
+        <div class="lang-switcher" style="margin-bottom: 20px;">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cs">CS</button>
+        </div>
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="coffee.html" data-i18n="nav_coffee">Coffee</a>
+        <a href="agriculture.html" data-i18n="nav_agri">Agriculture</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </div>
 
     <!-- ── Navigation ────────────────────────────────────────── -->
@@ -50,16 +54,20 @@
             <div class="nav-logo-mark">NTT</div>
             <div class="nav-logo-text">
                 <span class="nav-logo-name">BDC</span>
-                <span class="nav-logo-sub">Business Dev. Co.</span>
+                <span class="nav-logo-sub" data-i18n="logo_sub">Business Dev. Co.</span>
             </div>
         </a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="agriculture.html">Agriculture</a>
-            <a href="#about">About</a>
-            <a href="#impact">Impact</a>
-            <a href="contact.html" class="nav-cta">Get In Touch</a>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="coffee.html" data-i18n="nav_coffee">Coffee</a>
+            <a href="agriculture.html" data-i18n="nav_agri">Agriculture</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#impact" data-i18n="nav_impact">Impact</a>
+            <a href="contact.html" class="nav-cta" data-i18n="nav_get_in_touch">Get In Touch</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="cs">CS</button>
+            </div>
         </div>
         <div class="hamburger">
             <span></span><span></span><span></span>
@@ -80,10 +88,12 @@
             <div class="hero-panel-content">
                 <div class="hero-panel-icon">☕</div>
                 <div class="hero-panel-tag">Division I</div>
-                <h2 class="hero-panel-title">Naty's Coffee<br /><em>Division</em></h2>
-                <p class="hero-panel-desc">Premium Ethiopian coffee — sourced, roasted & delivered with passion</p>
+                <h2 class="hero-panel-title"><span data-i18n="coffee_div_title">Naty's Coffee</span><br /><em
+                        data-i18n="coffee_div_sub">Division</em></h2>
+                <p class="hero-panel-desc" data-i18n="coffee_div_desc">Premium Ethiopian coffee — sourced, roasted &
+                    delivered with passion</p>
                 <div class="hero-panel-cta">
-                    <span>Explore Coffee</span>
+                    <span data-i18n="explore_coffee">Explore Coffee</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -132,10 +142,12 @@
             <div class="hero-panel-content" style="align-items:flex-end;text-align:right;">
                 <div class="hero-panel-icon">🌱</div>
                 <div class="hero-panel-tag">Division II</div>
-                <h2 class="hero-panel-title">Agriculture<br /><em>Division</em></h2>
-                <p class="hero-panel-desc">High-yield European fertilizers blended for Ethiopian farmland</p>
+                <h2 class="hero-panel-title"><span data-i18n="agri_div_title">Agriculture</span><br /><em
+                        data-i18n="agri_div_sub">Division</em></h2>
+                <p class="hero-panel-desc" data-i18n="agri_div_desc">High-yield European fertilizers blended for
+                    Ethiopian farmland</p>
                 <div class="hero-panel-cta">
-                    <span>Explore Agriculture</span>
+                    <span data-i18n="explore_agri">Explore Agriculture</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -179,23 +191,25 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-left reveal-left">
-                    <div class="section-tag">Who We Are</div>
-                    <h2 class="section-title">Ethiopia's Most <span>Versatile</span> Business House</h2>
+                    <div class="section-tag" data-i18n="about_tag">Who We Are</div>
+                    <h2 class="section-title"><span data-i18n="about_title">Ethiopia's Most</span> <span
+                            data-i18n="about_title_span">Versatile</span></h2>
                     <div class="gold-divider"></div>
-                    <p class="section-sub" style="margin-top:20px">
+                    <p class="section-sub" style="margin-top:20px" data-i18n="about_p1">
                         NTT BDC is a multi-sector Ethiopian business development company operating at the intersection
                         of premium coffee manufacturing and high-impact agricultural solutions.
                     </p>
-                    <p class="section-sub" style="margin-top:16px">
+                    <p class="section-sub" style="margin-top:16px" data-i18n="about_p2">
                         Founded on principles of excellence and Ethiopian pride, we connect the richness of our land to
                         the world — from aromatic coffee beans to the fertilizers that keep our farms thriving.
                     </p>
                     <div class="about-badges" style="margin-top:32px">
-                        <div class="about-badge"><span>🏆</span> Quality Certified</div>
-                        <div class="about-badge"><span>🌍</span> Export Ready</div>
-                        <div class="about-badge"><span>🤝</span> Farmer-First</div>
+                        <div class="about-badge"><span data-i18n="badge_quality">Quality Certified</span></div>
+                        <div class="about-badge"><span data-i18n="badge_export">Export Ready</span></div>
+                        <div class="about-badge"><span data-i18n="badge_farmer">Farmer-First</span></div>
                     </div>
-                    <a href="contact.html" class="btn btn-gold" style="margin-top:36px">Partner With Us</a>
+                    <a href="contact.html" class="btn btn-gold" style="margin-top:36px" data-i18n="btn_partner">Partner
+                        With Us</a>
                 </div>
                 <div class="about-right reveal-right">
                     <div class="about-visual">
@@ -251,29 +265,30 @@
         <div class="impact-bg-pattern"></div>
         <div class="container" style="position:relative;z-index:2">
             <div class="impact-header reveal" style="text-align:center;margin-bottom:60px">
-                <div class="section-tag" style="justify-content:center">Our Impact</div>
-                <h2 class="section-title">Numbers That <span>Define Us</span></h2>
+                <div class="section-tag" style="justify-content:center" data-i18n="impact_tag">Our Impact</div>
+                <h2 class="section-title"><span data-i18n="impact_title">Numbers That</span> <span
+                        data-i18n="impact_title_span">Define Us</span></h2>
             </div>
             <div class="stats-grid" data-stagger>
                 <div class="stat-card glass-card stagger-child">
                     <div class="stat-icon">📅</div>
                     <div class="stat-number" data-counter data-target="10" data-suffix="+">10+</div>
-                    <div class="stat-label">Years in Operation</div>
+                    <div class="stat-label" data-i18n="stat_years">Years in Operation</div>
                 </div>
                 <div class="stat-card glass-card stagger-child">
                     <div class="stat-icon">👨‍🌾</div>
                     <div class="stat-number" data-counter data-target="1000" data-suffix="+">1000+</div>
-                    <div class="stat-label">Farmers Supported</div>
+                    <div class="stat-label" data-i18n="stat_farmers">Farmers Supported</div>
                 </div>
                 <div class="stat-card glass-card stagger-child">
                     <div class="stat-icon">🏪</div>
                     <div class="stat-number" data-counter data-target="10" data-suffix="+">10+</div>
-                    <div class="stat-label">Supermarket Partners</div>
+                    <div class="stat-label" data-i18n="stat_partners">Supermarket Partners</div>
                 </div>
                 <div class="stat-card glass-card stagger-child">
                     <div class="stat-icon">🌍</div>
                     <div class="stat-number" data-counter data-target="5" data-suffix="">5</div>
-                    <div class="stat-label">Regions Served</div>
+                    <div class="stat-label" data-i18n="stat_regions">Regions Served</div>
                 </div>
                 <div class="stat-card glass-card stagger-child">
                     <div class="stat-icon">📦</div>
@@ -295,8 +310,9 @@
     <section class="section" id="divisions">
         <div class="container">
             <div class="division-header reveal" style="text-align:center;margin-bottom:70px">
-                <div class="section-tag" style="justify-content:center">Our Divisions</div>
-                <h2 class="section-title" style="text-align:center">Two Pillars of <span>Ethiopian Excellence</span>
+                <div class="section-tag" style="justify-content:center" data-i18n="div_header_tag">Our Divisions</div>
+                <h2 class="section-title" style="text-align:center"><span data-i18n="div_header_title">Two Pillars
+                        of</span> <span data-i18n="div_header_span">Ethiopian Excellence</span>
                 </h2>
             </div>
             <div class="division-cards">
@@ -325,17 +341,17 @@
                             <h3 class="division-card-title">Naty's Coffee</h3>
                         </div>
                     </div>
-                    <p class="division-card-text">
+                    <p class="division-card-text" data-i18n="coffee_card_body">
                         From Ethiopia's highland farms to your cup — we roast, grind and package premium single-origin
                         coffee with meticulous care at every step.
                     </p>
                     <ul class="division-features">
-                        <li><span class="df-dot df-dot-gold"></span>Ethiopian single-origin sourcing</li>
-                        <li><span class="df-dot df-dot-gold"></span>Artisan roasting & precision grinding</li>
-                        <li><span class="df-dot df-dot-gold"></span>Retail, bulk & private label</li>
-                        <li><span class="df-dot df-dot-gold"></span>Export-grade quality certification</li>
+                        <li data-i18n="feat_coffee_1">Ethiopian single-origin sourcing</li>
+                        <li data-i18n="feat_coffee_2">Artisan roasting & precision grinding</li>
+                        <li data-i18n="feat_coffee_3">Retail, bulk & private label</li>
+                        <li data-i18n="feat_coffee_4">Export-grade quality certification</li>
                     </ul>
-                    <a href="coffee.html" class="btn btn-outline-gold">Explore Coffee →</a>
+                    <a href="coffee.html" class="btn btn-outline-gold" data-i18n="explore_coffee">Explore Coffee →</a>
                 </div>
 
                 <!-- Agriculture Card -->
@@ -359,17 +375,17 @@
                             <h3 class="division-card-title">Agriculture & Fertilizer</h3>
                         </div>
                     </div>
-                    <p class="division-card-text">
+                    <p class="division-card-text" data-i18n="agri_card_body">
                         Importing high-quality European fertilizers from Czech Republic and blending them locally to
                         supercharge Ethiopian farmland productivity.
                     </p>
                     <ul class="division-features">
-                        <li><span class="df-dot df-dot-green"></span>Czech Republic import partnership</li>
-                        <li><span class="df-dot df-dot-green"></span>Local blending technology</li>
-                        <li><span class="df-dot df-dot-green"></span>Soil-specific formulations</li>
-                        <li><span class="df-dot df-dot-green"></span>Direct farmer distribution</li>
+                        <li data-i18n="feat_agri_1">Czech Republic import partnership</li>
+                        <li data-i18n="feat_agri_2">Local blending technology</li>
+                        <li data-i18n="feat_agri_3">Soil-specific formulations</li>
+                        <li data-i18n="feat_agri_4">Direct farmer distribution</li>
                     </ul>
-                    <a href="agriculture.html" class="btn btn-green">Explore Agriculture →</a>
+                    <a href="agriculture.html" class="btn btn-green" data-i18n="explore_agri">Explore Agriculture →</a>
                 </div>
 
             </div>
@@ -470,7 +486,8 @@
                             <span class="nav-logo-sub">Business Dev. Co.</span>
                         </div>
                     </div>
-                    <p>Empowering Ethiopia through premium coffee manufacturing and high-impact agricultural solutions.
+                    <p data-i18n="footer_desc">Empowering Ethiopia through premium coffee manufacturing and high-impact
+                        agricultural solutions.
                         Quality, trust, and innovation since day one.</p>
                     <div class="footer-socials">
                         <a class="social-btn" href="#" aria-label="Facebook">f</a>
@@ -480,12 +497,12 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer_company">Company</h4>
                     <ul>
-                        <li><a href="#about">About NTT BDC</a></li>
-                        <li><a href="#impact">Our Impact</a></li>
-                        <li><a href="#why">Why Choose Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About NTT BDC</a></li>
+                        <li><a href="#impact" data-i18n="footer_impact">Our Impact</a></li>
+                        <li><a href="#why" data-i18n="footer_why">Why Choose Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -509,12 +526,13 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2026 NTT BDC – Business Development Company. All rights reserved.</p>
-                <p>Made with ❤️ in Ethiopia</p>
+                <p>We Grow Together</p>
             </div>
         </div>
     </footer>
 
     <script src="animations.js"></script>
+    <script src="i18n.js"></script>
 </body>
 
 </html>
